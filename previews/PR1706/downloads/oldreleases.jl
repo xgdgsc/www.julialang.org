@@ -59,6 +59,7 @@ open("./oldreleases.md", "w") do io
             code written for those releases. Note that these are not actively developed
             nor maintained anymore.
 
+            @@row @@col-12
             ~~~
             <table class="downloads table table-hover table-bordered">
               <thead>
@@ -101,5 +102,6 @@ open("./oldreleases.md", "w") do io
               </tbody>
             </table>
             ~~~
+            @@ @@
             """)
 end
