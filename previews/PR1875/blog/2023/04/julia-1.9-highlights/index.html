@@ -28,7 +28,7 @@ Profile.take_heap_snapshot&#40;&quot;Snapshot.heapsnapshot&quot;&#41;</code></pr
 <p>To learn more about the latest advancements in high-performance sorting in Julia, watch the JuliaCon 2022 talk, <a href="https://www.youtube.com/watch?v&#61;9SGuHFgJvSE">Julia&#39;s latest in high performance sorting</a>.</p>
 <h2 id=tasks_and_the_interactive_thread_pool ><a href="#tasks_and_the_interactive_thread_pool">Tasks and the interactive thread pool</a></h2>
 <p>Before version 1.9, Julia treated all tasks equally, running them on all available threads without any distinction in priority. However, there are situations where you may want certain tasks to be prioritized, such as when running a <a href="https://en.wikipedia.org/wiki/Heartbeat_&#40;computing&#41;">heartbeat</a> , providing an interactive interface, or displaying progress updates.</p>
-<p>To address this need, you can now designate a task as interactive when you <a href="https://chat.openai.com/c/@ref">Threads.@spawn</a>  it:</p>
+<p>To address this need, you can now designate a task as interactive when you <a href="https://docs.julialang.org/en/v1/base/multi-threading/#Base.Threads.@spawn"><code>Threads.@spawn</code></a>  it:</p>
 <pre><code class=language-julia >using Base.Threads
 @spawn :interactive f&#40;&#41;</code></pre>
 <p>You can set the number of interactive threads available using the following command:</p>
